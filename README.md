@@ -4,7 +4,7 @@
 
 # Knott.js Playground
 
-[Read the documentation](https://knottjs.netlify.app)
+[**Launch the Playground**](https://knottjs.netlify.app/playground).
 
 ## Build
 
