@@ -10,8 +10,8 @@
   const iframe = ref<HTMLIFrameElement>()
 
   const items = ref([
-    { text: 'HTML', alt: 'index.html', value: 'html' },
     { text: 'JS', alt: 'app.js', value: 'javascript' },
+    { text: 'HTML', alt: 'index.html', value: 'html' },
     { text: 'CSS', alt: 'style.css', value: 'css' },
   ])
 
@@ -36,7 +36,7 @@
 </script>
 
 <template>
-  <main class="border-t-2 border-tint-onyx-5">
+  <main class="bg-shade-onyx-4 shadow">
     <div class="flex flex-row height-full">
     
       <div 
@@ -50,6 +50,7 @@
         />
         
         <MonacoEditor 
+          class="fix-editor-container"
           :active-tab="currentTab" 
           @change="onChange" 
         />
@@ -58,7 +59,7 @@
       
       <iframe
         ref="iframe"
-        class="height-full width-full"
+        class="fix-preview-container height-full width-full bg-white"
         sandbox="allow-scripts"
         frameBorder="0"
       />
@@ -69,15 +70,19 @@
 
 <style>
   main {
-    height: 100vh;
+    height: 100vh; 
   }
-
+  .fix-editor-container {
+    height: 84.8vh !important; 
+  }
+  .fix-preview-container {
+    height: 93.2vh !important; 
+  }
   .gutter {
-    background-color: #ebebeb;
+    background-color: #00b6b645;
     background-repeat: no-repeat;
     background-position: 50%;
   }
-
   .gutter.gutter-horizontal {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
     cursor: col-resize;

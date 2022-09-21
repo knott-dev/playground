@@ -9,7 +9,5 @@
 </template>
 
 <style>
-  body {
-    --nav-height: 4.2rem;
-  }
+  body { --nav-height: 4.2rem }
 </style>

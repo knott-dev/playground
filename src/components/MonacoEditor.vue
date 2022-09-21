@@ -56,7 +56,8 @@
   onMounted(() => {
     editor = monaco.editor.create(container.value!, {
       language: activeTab.value,
-      theme: isDark.value ? 'vs-dark' : 'vs',
+      //theme: isDark.value ? 'vs-dark' : 'vs',
+      theme: "vs-dark",
       accessibilitySupport: "auto",
       autoIndent: "full",
       automaticLayout: true,
