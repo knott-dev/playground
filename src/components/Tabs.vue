@@ -23,12 +23,12 @@
       <button
         v-for="item in items"
         :key="item.value"
-        :class="props.modelValue === item.value ? 'flex-grow-0 flex-shrink-0 margin-r-1 padding-1 inline-block width-20 text-center text-white font-semibold bg-tint-teal-1 curve-border-md cursor-pointer transition duration-200 ease' : 'flex-grow-0 flex-shrink-0  margin-r-1 padding-1 inline-block width-20 text-center font-semibold text-tint-onyx-1 bg-tint-onyx-5 (hover)text-shade-onyx-1 (hover)bg-tint-onyx-4 curve-border-md cursor-pointer transition duration-200 ease'"
+        :class="props.modelValue === item.value ? 'flex-grow-0 flex-shrink-0 margin-r-1 padding-1 inline-block width-20 text-center text-shade-onyx-1 font-semibold bg-tint-lime-4 curve-border-md cursor-pointer transition duration-200 ease' : 'flex-grow-0 flex-shrink-0  margin-r-1 padding-1 inline-block width-20 text-center font-semibold text-tint-onyx-1 bg-tint-onyx-5 (hover)text-shade-onyx-1 (hover)bg-tint-onyx-4 curve-border-md cursor-pointer transition duration-200 ease'"
         @click.prevent="emit('update:modelValue', item.value)">
         <div>
           {{ item.text }}
         </div>
-        <div :class="props.modelValue === item.value ? 'text-white text-xs font-medium' : 'text-xs font-medium'">
+        <div :class="props.modelValue === item.value ? 'text-shade-onyx-1 text-xs font-medium' : 'text-xs font-medium'">
           {{ item.alt }}
         </div>
       </button>
